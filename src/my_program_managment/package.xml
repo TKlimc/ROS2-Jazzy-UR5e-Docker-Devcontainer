@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>my_program_managment</name>
+  <version>0.0.1</version>
+  <description>Package that defines the GeneratePoseArray service and related services.</description>
+
+  <maintainer email="timklimczak@gmx.de">Tim Klimczak</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Buildtool-Abhängigkeiten -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+
+  <!-- Laufzeit-Abhängigkeiten -->
+  <depend>geometry_msgs</depend>
+  <depend>rosidl_default_runtime</depend>
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+
+
+  <!-- Test-Abhängigkeiten -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- Gruppenzugehörigkeit -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

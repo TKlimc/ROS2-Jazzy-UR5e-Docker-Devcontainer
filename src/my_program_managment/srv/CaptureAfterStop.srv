@@ -1,0 +1,5 @@
+# Request
+builtin_interfaces/Time stop_stamp   # Zeitpunkt, an dem der Roboter stillsteht
+---
+# Response
+bool   success                       # Bild gefunden, gespeichert, Achsen projiziert …

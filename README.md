@@ -63,8 +63,9 @@ docker run --rm -it -p 5900:5900 -p 6080:6080 \
 --net ursim_net --ip 192.168.56.101 \
 universalrobots/ursim_e-series
 ```
-This will start the URSim software for a virtual robot simulation.
-
+This will start the URSim software for a virtual robot simulation. Click the Link in the Terminal, poweron the Robor, start the Robot. Click the Programtab in the top left corner, select URCaps and External Control then click play in the botton right corner.
+External Control enables you to move the Robot with ROS2 but also allows you to move the real or in this case the simulated robot.
+https://docs.universal-robots.com/Universal_Robots_ROS2_Documentation/doc/ur_robot_driver/ur_robot_driver/doc/operation_modes.html
 
 ### 3. Open the project in VS Code
 
@@ -98,3 +99,16 @@ source install/setup.bash
 ```
 
 This will build the project and set up your workspace.
+
+### 6. Start the project
+
+```bash
+ros2 launch my_program_managment start_all_moveit.launch.py
+```
+
+If your simulation container from step 2 is running,
+you can now start the robot program inside the simulation container (bottom right corner of the URSim interface).
+After starting it, you should receive a confirmation message in VS Code indicating that everything is working.
+
+You can now move the simulated robot within the URSim interface and observe its movement in ROS 2 RViz in real time.
+Your base setup is now complete, and you can start writing your own ROS 2 packages to control the robot using MoveIt.
